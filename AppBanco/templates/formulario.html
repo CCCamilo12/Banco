@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'js/gestionclientes.js' %}"></script>
+    <script src="{% static 'js/consultar.js' %}"></script>
+    
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <form method="" id="frminsertar">
+        {% csrf_token %}
+        <label for="Documento">Documento</label>
+        <input type="text" name="Documento" id="Documento">
+
+        <label for="Nombre">Nombre</label>
+        <input type="text" name="Nombre" id="Nombre">
+
+        <label for="Apellido">Apellido</label>
+        <input type="text" name="Apellido" id="Apellido">
+
+        <label for="Correo">Correo</label>
+        <input type="text" name="Correo" id="Correo">
+
+        <label for="Celular">Celular</label>
+        <input type="text" name="Celular" id="Celular">
+        
+        <input type="submit" value="Guardar">
+    </form>
+
+    <table id="consultaclientes"></table>
+    
+
+</body>
+</html>
+
+
+
